@@ -1,23 +1,17 @@
 import React from 'react';
-// import Watermark from 'react-watermark-component';
+import Watermark from 'react-watermark';
 
 const ShowPhoto = ({ photo }) => {
     
     const { image } = photo;
 
     return (
-        <div>
-            <img src={image} />
+        <div className='d-flex align-items-center justify-content-center'>
+            <Watermark text="My Watermark" fontSize={24} opacity={0.5}>
+                <img src={image} alt="My Image" />
+            </Watermark>
         </div>
-        //     <Watermark
-        //     image={image}
-        //     text="My Photo"
-        //     textSize={24}
-        //     x={10}
-        //     y={10}
-        //     color="#ffffff"
-        //     opacity={0.5}
-        //   />
+
     );
 };
 

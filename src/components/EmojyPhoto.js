@@ -3,6 +3,7 @@ import ShowPhoto from './ShowPhoto';
 import { PhotoContext } from '../context/PhotoContextProvider';
 import Loader from '../shared/Loader';
 import styles from "./emojy.module.css"
+
 const EmojyPhoto = () => {
 
     const [selectedItems, setSelectedItems] = useState([]);
@@ -11,10 +12,11 @@ const EmojyPhoto = () => {
    
 
     const clickHandler = () => {
+        
         const dataCount = emojyPhoto.length;
         const randomIndex = Math.floor(Math.random() * dataCount);
         const randomData = emojyPhoto[randomIndex];
-        setSelectedItems([...selectedItems, randomData]);
+        setSelectedItems([randomData]);
     };
 
     console.log(selectedItems);
