@@ -44,7 +44,7 @@ const EmojyPhoto = () => {
                     <Loader />
             }
             {
-                emojyPhoto.length ? "" : <h1>button disable while api come in to Server</h1>
+                emojyPhoto.length ? null : <h1>button disable while api come in to Server</h1>
             }
             {
                 emojyPhoto.length && errorClickButton && <h1>Now Click your Button And Random EmojyPhoto</h1>

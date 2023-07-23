@@ -7,28 +7,27 @@ const WaterMark = ({ children }) => {
 
     const [textWaterMark, setTextWaterMark] = useState("");
 
-    const changeHandler = (event) => {
+    const changeHandler = event => setTextWaterMark(event.target.value);
 
-        setTextWaterMark(event.target.value);
-
-    };
-    
     return (
-        <div >
-            <Watermark text={textWaterMark}>
-                <div className={styles.form}>
-                    <label>:Type your Mark</label>
-                    <input
-                        type='text'
-                        name="watermark"
-                        value={textWaterMark}
-                        onChange={changeHandler}
-                        placeholder='text your mark' />
-                </div>
-                <div style={{ width: 100, height: 100, color: "#000", borderRadius: "50%" }}>
+        <div>
+            <div className={styles.form}>
+                <label>:Type your Mark</label>
+                <input
+                    type='text'
+                    name="watermark"
+                    value={textWaterMark}
+                    onChange={changeHandler}
+                    placeholder='text your mark' />
+            </div>
+            <div className={styles.waterMark}>
+                <Watermark
+                    text={textWaterMark}
+                    textColor='red'
+                >
                     {children}
-                </div>
-            </Watermark>
+                </Watermark>
+            </div>
         </div>
     );
 };
