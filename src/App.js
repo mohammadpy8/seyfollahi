@@ -1,18 +1,17 @@
 import React from 'react';
-import Fliters from './components/Fliters';
-import MenuBar from './components/MenuBar';
+//Context
+import PhotoContextProvider from './context/PhotoContextProvider';
+//Components
+import EmojyPhoto from './components/EmojyPhoto';
 
 import './App.css';
-import ShowContacts from './components/ShowContacts';
-import Pagination from './components/Pagination';
 
 function App() {
   return (
-    <div>
-      <Fliters />
-      <MenuBar />
-      <ShowContacts />
-      <Pagination />
+    <div className="App">
+      <PhotoContextProvider>
+        <EmojyPhoto />
+      </PhotoContextProvider>
     </div>
   );
 }
