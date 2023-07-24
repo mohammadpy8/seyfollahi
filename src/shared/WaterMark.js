@@ -7,7 +7,7 @@ const WaterMark = ({ children }) => {
 
     const [textWaterMark, setTextWaterMark] = useState("");
 
-    const changeHandler = event => setTextWaterMark(event.target.value);
+    const changeHandler = (event) => setTextWaterMark(event.target.value);
 
     return (
         <div>
@@ -24,6 +24,7 @@ const WaterMark = ({ children }) => {
                 <Watermark
                     text={textWaterMark}
                     textColor='red'
+                    textSize={100}
                 >
                     {children}
                 </Watermark>
