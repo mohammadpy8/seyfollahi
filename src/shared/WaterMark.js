@@ -28,7 +28,7 @@ const WaterMark = ({ children }) => {
           text={textWaterMark}
           textColor="#ff00f7"
           textSize={70}
-          opacity={0.75}
+          opacity={0.65}
         >
           {children}
         </Watermark>

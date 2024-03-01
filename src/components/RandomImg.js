@@ -2,7 +2,7 @@ import React from "react";
 import ShowPhoto from "./ShowPhoto";
 import Loader from "../shared/Loader";
 
-const RandomImg = ({ resetColor, changeColor, RandomImg }) => {
+const RandomImg = ({ resetColor, changeColor, RandomImg, valueMagnifier }) => {
   console.log(RandomImg);
 
   return (
@@ -12,6 +12,7 @@ const RandomImg = ({ resetColor, changeColor, RandomImg }) => {
           image={RandomImg}
           changeColor={changeColor}
           resetColor={resetColor}
+          valueMagnifier={valueMagnifier}
         />
       ) : (
         <Loader />

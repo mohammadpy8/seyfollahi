@@ -3,7 +3,7 @@
   place-items: center !important;
   place-content: center !important;
   place-self: center !important;
-  padding-top: 150px;
+  padding-top: 80px;
 }
 
 .appContainer {
@@ -108,4 +108,29 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+}
+
+.magnifierContainer {
+  padding: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.magnifierContainer label {
+  color: #ff00f7;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #ff00f7;
+}
+
+.magnifierContainer select {
+  background-color: #de49ff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
 }

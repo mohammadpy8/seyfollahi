@@ -5,6 +5,7 @@ import RandomImages from "./components/RandomImg";
 
 ///shared components
 import ColorChange from "./shared/ColorChange";
+import SizeMagnifier from "./shared/SizeMagnifier";
 
 ///context components
 import { PhotoContext } from "./context/PhotoContextProvider";
@@ -15,6 +16,7 @@ import styles from "./styles/RandomImg.module.css";
 function App() {
   const [changeColor, setChangeColor] = useState(false);
   const [resetColor, setResetColor] = useState(false);
+  const [valueMagnifier, setValueMagnifier] = useState("");
   const RandomImg = useContext(PhotoContext);
 
   console.log({ resetColor, changeColor });
@@ -26,6 +28,12 @@ function App() {
           <RandomImages
             resetColor={resetColor}
             changeColor={changeColor}
+            RandomImg={RandomImg}
+            valueMagnifier={valueMagnifier}
+          />
+          <SizeMagnifier
+            setValueMagnifier={setValueMagnifier}
+            valueMagnifier={valueMagnifier}
             RandomImg={RandomImg}
           />
           <ColorChange
