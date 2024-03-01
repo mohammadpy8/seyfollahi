@@ -1,16 +1,25 @@
-import React from 'react';
-import WaterMark from '../shared/WaterMark';
-import styles from "./emojy.module.css";
+import React from "react";
 
-const ShowPhoto = ({ image }) => {
+///shared componentes
+import WaterMark from "../shared/WaterMark";
+import MangnifierImg from "../shared/MangnifierImg";
 
-    return (
-        <div className={styles.img}>
-            <WaterMark>
-                <img src={image} className={styles.randomImg} />
-            </WaterMark>
-        </div>
-    );
+///styles
+import styles from "../styles/RandomImg.module.css";
+
+const ShowPhoto = ({ image, resetColor, changeColor }) => {
+  return (
+    <div className={styles.img}>
+      <WaterMark>
+        <MangnifierImg
+          SrcImg={`data:image/png;base64,${image}`}
+          className={
+            changeColor && !resetColor ? styles.randomImgGray : styles.randomImg
+          }
+        />
+      </WaterMark>
+    </div>
+  );
 };
 
 export default ShowPhoto;
