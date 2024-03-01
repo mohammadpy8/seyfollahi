@@ -17,15 +17,15 @@ const api = axios.create({
   timeout: 2500,
 });
 
-const httpRequest = {
+const httpRequest = Object.freeze({
   GET: api.get,
   POST: api.post,
   PUT: api.put,
   PATCH: api.patch,
   DELETE: api.delete,
-};
+});
 
-const fetchData = async () => {
+const FechingData = async () => {
   try {
     const { data } = await httpRequest.GET(`category=${RandomName(listNames)}`);
     return data;
@@ -35,4 +35,4 @@ const fetchData = async () => {
   }
 };
 
-export { fetchData, httpRequest };
+export { FechingData, httpRequest };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 
 ///Data
-import { fetchData } from "../services/Api";
+import { FechingData } from "../services/Api";
 
 export const PhotoContext = createContext();
 
@@ -11,7 +11,7 @@ const PhotoContextProvider = ({ children }) => {
 
   useEffect(() => {
     const getData = async () => {
-      setData(await fetchData());
+      setData(await FechingData());
     };
 
     getData();
