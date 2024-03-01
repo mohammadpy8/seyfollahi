@@ -15,7 +15,6 @@ const WaterMark = ({ children }) => {
   return (
     <div className={styles.waterMarkContainer}>
       <div className={styles.form}>
-        <label>waterMark</label>
         <input
           type="text"
           name="watermark"
@@ -27,7 +26,7 @@ const WaterMark = ({ children }) => {
       <div className={styles.waterMark}>
         <Watermark
           text={textWaterMark}
-          textColor="#000"
+          textColor="#ff00f7"
           textSize={70}
           opacity={0.75}
         >
